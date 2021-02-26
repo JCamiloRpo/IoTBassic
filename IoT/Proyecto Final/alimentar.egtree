@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<EventGhost Version="0.5.0-rc6" Guid="{48735560-0F51-40E6-BEAA-70C2002FCD17}" Time="1573491019.82">
+    <Autostart Name="AutoIniciar" XML_Guid="{D4005DA6-2F87-4E9D-8EFC-B58FCE59B225}" Expanded="True">
+        <Plugin XML_Guid="{038602BF-3026-4E0E-9289-68BED51E9096}" Identifier="Serial" Guid="{D565171F-1703-4212-972C-B824B55329CB}" File="Serial">
+            gAIoSwJNgCVLA0sASwBLAIlYAgAAAFxycQBYBgAAAFNlcmlhbHEBSwB0cQIu
+        </Plugin>
+        <Plugin XML_Guid="{3FFD36DF-01E2-4F4B-9D25-B210D245B5EE}" Identifier="Speech" Guid="{76A1638D-1D7D-4582-A726-A17B1A6FC723}" File="Speech">
+            gAIpLg==
+        </Plugin>
+        <Plugin XML_Guid="{8DF43DA3-43BA-4613-99B3-3A7891BCE9B6}" Identifier="Keyboard" Guid="{59CBD10F-C1D8-4ADB-999B-9B76BA360F1F}" File="Keyboard">
+            gAKIhXEALg==
+        </Plugin>
+    </Autostart>
+    <Macro Name="Alimentar" XML_Guid="{3821152D-61D9-4F32-AB21-4A1B3E33EC32}" Expanded="True">
+        <Event Name="Keyboard.Shift+Ctrl+0" XML_Guid="{E3EAC2D9-B508-447A-95D8-73D7DCD41420}" />
+        <Action XML_Guid="{EF665FDD-8615-49D6-83D4-E3A93F7BADB7}">
+            Speech.TextToSpeech(u'Microsoft Helena Desktop - Spanish (Spain)', 0, u'Alimentando', u'', 100, u'Altavoces (Realtek High Definition Audio)')
+        </Action>
+        <Action XML_Guid="{DEC8415C-E98E-4BE8-B503-EAD6163532B7}">
+            Serial.Write(u'0')
+        </Action>
+    </Macro>
+</EventGhost>
